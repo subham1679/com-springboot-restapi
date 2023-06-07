@@ -25,4 +25,9 @@ public class BookService {
 		booklist.add(book);
 		return book;
 	}
+	
+	public void deleteBookByID(int id)
+	{
+	   booklist.removeIf(e->e.getId()==id);
+	}
 }
