@@ -30,4 +30,28 @@ public class BookService {
 	{
 	   booklist.removeIf(e->e.getId()==id);
 	}
+	
+	
+	public void updateBookById(Book book, int id)
+	{
+		
+		for(Book listElement: booklist)
+		{
+			if(listElement.getId()==id)
+			{
+				{
+					listElement.setAuthor(book.getAuthor());
+					listElement.setTitle(book.getTitle());	
+			    }
+			}
+		}
+		
+//	    booklist.stream().map(b->{
+//		    if(b.getId()==id)
+//		    {
+//		    	b.setAuthor("Vikash");
+//		    	b.setTitle("Introduction to Algorithm");
+//		    }
+//	   })
+	}
 }
